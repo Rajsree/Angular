@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RecordsService } from './records.service';
 
 @Component({
   selector: 'app-root',
@@ -7,25 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
-  records = [{
-  name:"rahul",
-  age:27},
-  {
-  name:"Raj",
-  age:23
-  },
-  {
-    name:"rahul",
-    age:27},
-    {
-    name:"Raj",
-    age:23
-    },
-  {
-    name:"rahul",
-    age:27},
-    {
-    name:"Raj",
-    age:23
-  }]
+  records = {}
+
+  constructor(private MyfirstService:RecordsService ) {
+  }
+  ngOnInit() {
+  this.records = this.MyfirstService.getRecords();
+  }
 }
