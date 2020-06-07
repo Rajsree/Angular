@@ -1,0 +1,21 @@
+tr.odd {
+background:red;
+color:white
+}
+
+tr.even {
+background:black;
+color:white
+}
+
+tr.firstclass {
+background:green;
+color:white
+}
+
+tr.lastclass {
+background : blue;
+color:black
+}
+
+
