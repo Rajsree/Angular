@@ -1,3 +1,22 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <p> App Component </p>
 <app-hello-component></app-hello-component>
+
+
+<!--source to Target data binding. Property binding done by []-->
+
+
+<!--Notice disable value is not binded to the property-->
+<input type="text" value="{{TryBinding}}" disabled="{{mydisabledValue}}"/><br>
+<input type="text" [value]="TryBinding" [disabled]="mydisabledValue"/>
+
+<button (click)="submitFunction()" >"CLICK ME!"</button>
+
+<br><br>
+<!--Demonstrating 2way data binding-->
+<input type="text" [value]="twowaytext" (input)="twowayDemo($event)">
+{{ twowaytext }}
+<br><br>
+<!--NgModel-->
+<input type="text" [(ngModel)]="ngDemotext" />
+{{ ngDemotext }}
